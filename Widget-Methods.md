@@ -418,7 +418,7 @@ Removes the chart from the server.
 1. `callback`: function(unixtime, price).
     This callback function is expected to return a value (see below).
 
-The Charting Library will call the callback function every time  user opens a context menu on the chart.
+The Charting Library will call the callback function every time user opens a context menu on the chart.
 The arguments that are passed to the callback function contain unix time and price of the clicked point on the chart.
 
 You have to return an array of objects that have the following format to add or remove items from the context menu.
@@ -438,6 +438,8 @@ You have to return an array of objects that have the following format to add or 
 Use the minus sign to add a separator. Example: `{ text: "-", position: "top" }`.
 
 Use the minus sign in front of the item text to remove an existing item from the menu.
+
+Also see [`context_menu`](Widget-Constructor#context_menu) constructor parameter.
 
 Example:
 

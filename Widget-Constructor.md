@@ -63,6 +63,7 @@ Below is a complete list of supported parameters. Use [Widget methods](Widget-Me
   * [time_scale](#time_scale)
   * [custom_translate_function](#custom_translate_function)
   * [symbol_search_complete](#symbol_search_complete)
+  * [context_menu](#context_menu)
 * Trading Terminal only
   * [widgetbar](#widgetbar)
   * [rss_news_feed](#rss_news_feed)
@@ -680,6 +681,37 @@ symbol_search_complete: (symbol) => {
     });
 }
 ```
+
+### context_menu
+
+You could use this object to override context menu in some way.
+
+#### items_processor
+
+Provide this function if you want to change the set of actions being displayed in the context menu.
+
+You can filter out, add yours and re-order items.
+
+The library will call your function each time it wants to display a context menu and with provide a list of items to display.
+This function should return an array of items to display.
+
+A function has the following signature:
+
+```ts
+type ContextMenuItemsProcessor = (items: readonly IActionVariant[], actionsFactory: ActionsFactory) => Promise<readonly IActionVariant[]>;
+```
+
+Where:
+
+* `items` - an array of items the library wants to display
+* `actionsFactory` - a factory you could use to create a new items for the context menu.
+  It consists of the following methods:
+  * `createAction` - creates an action with provided options.
+  * `createAsyncAction` - creates an action that will wait for a promise to get its options. In terms of GUI until a promise is resolved the loader/spinner will be displayed.
+  * `createSeparator` - creates a separator item.
+
+Your function must return a Promise for an array of context menu items to display.
+Please look at [TypeScript declaration file](https://github.com/tradingview/charting_library/blob/unstable/charting_library/charting_library.d.ts) provided with the package for types and possible options/functions you might use.
 
 ## Trading Terminal only
 
