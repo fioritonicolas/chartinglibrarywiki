@@ -13,6 +13,7 @@ This object has following fields:
 * `filledAreasStyle` - an object. The keys are filled area ids, the values are style objects with fields:
   * `color`* - string
   * `visible`* - boolean
+  * `transparency`* - number
 * `inputs` - an object with `input id` as a key and default value for this input. The default value can be `string`, `number` or `bool` depending on input type. The field is required if your study has inputs
 * `palettes` - an object with `pallette id` as a key and palette definition: `[name]: { colors, valToIndex, addDefaultColor }`, where
   * `colors`* - an object `{ [color_id]: color_info }`. The color is an object with following fields:

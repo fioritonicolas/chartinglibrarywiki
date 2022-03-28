@@ -308,6 +308,7 @@ custom_indicators_getter: function(PineJS) {
                 filledAreaId1: {
                     color: 'yellow',
                     visible: true,
+                    transparency: 40,
                 },
             },
 
