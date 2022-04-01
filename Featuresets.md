@@ -154,4 +154,5 @@ Please note that the leading `-` characters are not part of the featureset name 
 | show_order_panel_on_start | off | 17 | Order Panel is visible when the chart opens
 | order_panel_close_button | on | 17 | Shows close Order Panel button
 | order_panel_undock | on | 17 | Shows the Undock button in the Order Panel Settings
-| chart_hide_close_position_button | off | 21 | Hide the close position button
+| chart_hide_close_position_button | off | 22 | Hide the close button for position
+| chart_hide_close_order_button | off | 22 | Hide the close button for order
