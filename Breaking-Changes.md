@@ -29,6 +29,8 @@ Since this version this request contains `multipart/form-data` with the field `p
 
 - Study `Ichimoku` has been modified with some `Inputs` & `Style` properties renamed.
 
+- Both `scrollPosition` and `defaultScrollPosition` from [Chart-Methods](Chart-Methods#scrollposition) have been deprecated in favour of [rightOffset](Time-Scale-Api#rightoffset) and [defaultRightOffset](Time-Scale-Api#defaultrightoffset) accordingly.
+
 **Trading Terminal**
 
 - The [`watchList`](Widget-Methods#chart-watchlist) method now returns a promise that resolves a watchlist API object when the watchlist widget has loaded.

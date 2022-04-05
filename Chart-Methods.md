@@ -1050,6 +1050,8 @@ console.log(widget.activeChart().getVisiblePriceRange());
 
 *Starting from version 1.15.*
 
+**Deprecated**: Use [rightOffset](Time-Scale-Api#rightoffset) instead.
+
 Returns the distance from the right edge of the chart to the last bar, measured in bars.
 This is actually the current scrolling position of the chart, including the right margin.
 
@@ -1060,6 +1062,8 @@ console.log(widget.activeChart().scrollPosition());
 ### defaultScrollPosition()
 
 *Starting from version 1.15.*
+
+**Deprecated**: Use [defaultRightOffset](Time-Scale-Api#defaultrightoffset) instead.
 
 Returns the default distance from the right edge of the chart to the last bar, measured in bars.
 

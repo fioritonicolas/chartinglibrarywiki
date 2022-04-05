@@ -713,6 +713,29 @@ Where:
 Your function must return a Promise for an array of context menu items to display.
 Please look at [TypeScript declaration file](https://github.com/tradingview/charting_library/blob/unstable/charting_library/charting_library.d.ts) provided with the package for types and possible options/functions you might use.
 
+#### renderer_factory
+
+**EXPERIMENTAL.**
+
+By providing this function you could override the default renderer for context menu.
+The signature of the function is the following:
+
+```ts
+export type ContextMenuRendererFactory = (items: readonly IActionVariant[], params: CreateContextMenuParams, onDestroy: () => void) => Promise<IContextMenuRenderer>;
+```
+
+Where:
+
+* `items` - an array of items the library wants to display
+* `params` - parameters of a context menu. Currently it is an empty object and this argument is reserved for future updates.
+* `onDestroy` - a function that you should call once a created menu is hidden/destroyed
+
+The returned value should be a Promise object that resolves with an object with the following methods:
+
+* `show(pos)` - displays the menu at the position `pos`. Please refer to [TypeScript declaration file](https://github.com/tradingview/charting_library/blob/unstable/charting_library/charting_library.d.ts) for exact type of `position` object.
+* `hide()` - hides the menu.
+* `isShown()` - returns whether a menu is currently displayed.
+
 ## Trading Terminal only
 
 ### widgetbar
