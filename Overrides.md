@@ -52,6 +52,9 @@ paneProperties.legendProperties.showBarChange: true
 paneProperties.legendProperties.showBackground: true
 paneProperties.legendProperties.backgroundTransparency: 50
 
+scalesProperties.axisHighlightColor: "rgba(41, 98, 255, 0.25)"
+scalesProperties.axisLineToolLabelBackgroundColorActive: "#143EB3"
+scalesProperties.axisLineToolLabelBackgroundColorCommon: "#2962FF"
 scalesProperties.backgroundColor: "#ffffff"
 scalesProperties.lineColor: "rgba(42, 46, 57, 0.14)"
 scalesProperties.textColor: "#131722"
