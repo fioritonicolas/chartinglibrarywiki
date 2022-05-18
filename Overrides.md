@@ -19,7 +19,21 @@ paneProperties.backgroundType: "solid" // or "gradient"
 paneProperties.background: "#ffffff"
 paneProperties.backgroundGradientStartColor: "#ffffff"
 paneProperties.backgroundGradientEndColor: "#ffffff"
+```
 
+***Note about mixing background & theme***
+
+For `dark theme` the default background type is **gradient** therefore the `paneProperties.background` property affects the color for solid background type!
+
+So, for changing the override background color for dark theme, we can use code below
+
+```javascript
+widget.applyOverrides({ 'paneProperties.background': 'red', 'paneProperties.backgroundType' : 'solid' })
+or
+widget.applyOverrides({ 'paneProperties.backgroundGradientStartColor': 'red', 'paneProperties.backgroundGradientEndColor' : 'red' })
+```
+
+```javascript
 paneProperties.vertGridProperties.color: "rgba(42, 46, 57, 0.06)"
 paneProperties.vertGridProperties.style: LINESTYLE_SOLID
 
