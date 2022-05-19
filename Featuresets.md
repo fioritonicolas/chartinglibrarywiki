@@ -75,6 +75,7 @@ Please note that the leading `-` characters are not part of the featureset name 
 | hide_unresolved_symbols_in_legend       | off           |       21        | Hide unresolved symbols in the chart legend and the data window|
 | show_zoom_and_move_buttons_on_touch     | off           |       21        | On touch device show the zoom and move buttons at the bottom of the chart|
 | hide_main_series_symbol_from_indicator_legend | on           |       22        | Hide the optional symbol input value from the indicator's legend if 'Main chart symbol' option is selected |
+| hide_price_scale_global_last_bar_value  | off           |       23        | Hide the global last price label on price scale if last bar is outside of visible range |
 
 ### Elements placement
 
