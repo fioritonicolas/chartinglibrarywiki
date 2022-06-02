@@ -701,6 +701,18 @@ A function has the following signature:
 type ContextMenuItemsProcessor = (items: readonly IActionVariant[], actionsFactory: ActionsFactory) => Promise<readonly IActionVariant[]>;
 ```
 
+### settings_overrides
+
+The object that contains new values for values saved to the settings. These overrides will replace any matching values from the settings, regardless of where the settings are loaded from (i.e. local storage or a custom settings adapter). The object is similar to the [overrides](#overrides) object.
+
+[overrides](#overrides) will not affect values that have been saved to settings so this option can be used instead.
+
+```javascript
+settings_overrides: {
+    "linetooltrendline.linecolor": "blue"
+}
+```
+
 Where:
 
 * `items` - an array of items the library wants to display
