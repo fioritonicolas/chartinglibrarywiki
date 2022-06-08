@@ -296,7 +296,7 @@ These functions should return the text that specifies date or time. `formatLocal
 `tickMarkFormatter` is a function with the following signature:
 
 ```typescript
-function tickMarkFormatter(date: Date, tickMarkType: TickMarkType): string
+function tickMarkFormatter(date: Date, tickMarkType: TickMarkType): string;
 
 /**
  * Represents the type of a tick mark on the time axis.
@@ -321,8 +321,7 @@ type TickMarkType =
     /**
      * A time with seconds.
      */
-    | 'TimeWithSeconds'
-}
+    | 'TimeWithSeconds';
 ```
 
 Example:
