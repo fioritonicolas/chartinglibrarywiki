@@ -100,7 +100,7 @@ POST REQUEST: `charts_storage_url/charts_storage_api_version/charts?client=clien
 RESPONSE: JSON Object
 
 1. `status`: `ok` or `error`
-1. `id`: unique integer identifier of the chart (example, `9163`)
+1. `id`: unique string identifier of the chart (example, `9163`)
 
 #### SAVE AS CHART
 

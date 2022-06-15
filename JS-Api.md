@@ -293,6 +293,7 @@ The Library assumes that you will call `onDataCallback` only once per `getTimesc
 * `color`: `red` | `green` | `blue` | `yellow` | ... | `#000000`
 * `label`: a letter to be printed on a mark. Single character
 * `tooltip`: array of text strings. Each element of the array is a new text line of a tooltip.
+* `shape`: optional mark shape. For possible values see the `TimeScaleMarkShape` type in the TypeScript type definitions.
 
 Only one mark per bar is allowed. Marks outside of the bars are not allowed.
 

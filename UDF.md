@@ -276,6 +276,7 @@ A response is expected to be an array of objects with properties listed below.
 * `label`: a letter to be displayed in a circle
 * `time`: unix time
 * `tooltip`: tooltip text
+* `shape`: optional mark shape. For possible values see the `TimeScaleMarkShape` type in the TypeScript type definitions.
 
 **Note:** this call will be requested if your data feed sent `supports_timescale_marks: true` in the configuration data.
 

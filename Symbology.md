@@ -167,7 +167,7 @@ Timezone of the exchange for this symbol. We expect to get the name of the time 
 Format of displaying labels on the price scale:
 
 - `price` - formats decimal or fractional numbers based on `minmov`, `pricescale`, `minmove2` and `fractional` values
-- `volume` - formats decimal numbers in thousands, millions or billions
+- `volume` - formats decimal numbers in thousands, millions, billions or trillions
 
 ## minmov, pricescale, minmove2, fractional
 
