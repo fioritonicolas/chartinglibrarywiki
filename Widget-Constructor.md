@@ -738,7 +738,11 @@ export type ContextMenuRendererFactory = (items: readonly IActionVariant[], para
 Where:
 
 * `items` - an array of items the library wants to display
-* `params` - parameters of a context menu. Currently it is an empty object and this argument is reserved for future updates.
+* `params` - an object representing where the user right-clicked on (only if there is an existing menu), consisting of:
+  * `menuName` - name of the menu
+  * `detail` - object providing more details for the menu:
+    * `type` - could be either `series` | `study` or `shape`
+    * `id` - string (series), string | null (study), number | string | null (shape)
 * `onDestroy` - a function that you should call once a created menu is hidden/destroyed
 
 The returned value should be a Promise object that resolves with an object with the following methods:
