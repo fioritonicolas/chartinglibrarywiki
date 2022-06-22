@@ -556,7 +556,9 @@ This is a shorthand for [createMultipointShape](#createmultipointshapepoints-opt
     * `channel`: If the price is not set then `channel` value defines where the shape is placed relative to the bar. Possible values are `open`, `high`, `low`, `close`.
         If no channel is specified then 'open' is a default value.
 1. `options`: object `{shape, [text], [lock], [overrides]}`, it is the same as in [createMultipointShape](#createmultipointshapepoints-options) method.
-    * `shape` may be one of the [identifiers](Shapes-and-Overrides) that require only one point.
+    * `shape` may be one of the following identifiers that require only one point:
+        `arrow_up` | `arrow_down` | `flag` | `vertical_line` | `horizontal_line` | `long_position` | `short_position` | `icon`
+
         `flag` is the default value.
     * `text` is an optional argument. It's the text that will be included in the shape if it's supported. Additional field `showLabel` in overrides may be necessary.
     * `lock` shows whether a user will be able to remove/change/hide the shape or not.
