@@ -64,6 +64,7 @@ Below is a complete list of supported parameters. Use [Widget methods](Widget-Me
   * [custom_translate_function](#custom_translate_function)
   * [symbol_search_complete](#symbol_search_complete)
   * [context_menu](#context_menu)
+  * [settings_overrides](#settings_overrides)
 * Trading Terminal only
   * [widgetbar](#widgetbar)
   * [rss_news_feed](#rss_news_feed)
@@ -700,18 +701,6 @@ A function has the following signature:
 type ContextMenuItemsProcessor = (items: readonly IActionVariant[], actionsFactory: ActionsFactory) => Promise<readonly IActionVariant[]>;
 ```
 
-### settings_overrides
-
-The object that contains new values for values saved to the settings. These overrides will replace any matching values from the settings, regardless of where the settings are loaded from (i.e. local storage or a custom settings adapter). The object is similar to the [overrides](#overrides) object.
-
-[overrides](#overrides) will not affect values that have been saved to settings so this option can be used instead.
-
-```javascript
-settings_overrides: {
-    "linetooltrendline.linecolor": "blue"
-}
-```
-
 Where:
 
 * `items` - an array of items the library wants to display
@@ -741,8 +730,8 @@ Where:
 * `params` - an object representing where the user right-clicked on (only if there is an existing menu), consisting of:
   * `menuName` - name of the menu
   * `detail` - object providing more details for the menu:
-    * `type` - could be either `series` | `study` or `shape`
-    * `id` - string (series), string | null (study), number | string | null (shape)
+    * `type` - could be either `series` | `study`, `shape` or `groupOfShapes`
+    * `id` - string (series), string | null (study), number | string | null (shape) or string | null (groupOfShapes)
 * `onDestroy` - a function that you should call once a created menu is hidden/destroyed
 
 The returned value should be a Promise object that resolves with an object with the following methods:
@@ -750,6 +739,18 @@ The returned value should be a Promise object that resolves with an object with 
 * `show(pos)` - displays the menu at the position `pos`. Please refer to [TypeScript declaration file](https://github.com/tradingview/charting_library/blob/unstable/charting_library/charting_library.d.ts) for exact type of `position` object.
 * `hide()` - hides the menu.
 * `isShown()` - returns whether a menu is currently displayed.
+
+### settings_overrides
+
+The object that contains new values for values saved to the settings. These overrides will replace any matching values from the settings, regardless of where the settings are loaded from (i.e. local storage or a custom settings adapter). The object is similar to the [overrides](#overrides) object.
+
+[overrides](#overrides) will not affect values that have been saved to settings so this option can be used instead.
+
+```javascript
+settings_overrides: {
+    "linetooltrendline.linecolor": "blue"
+}
+```
 
 ## Trading Terminal only
 
