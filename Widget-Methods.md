@@ -202,7 +202,7 @@ widget.onShortcut(['ctrl', 'shift', 220], function() {
 | `onSelectedLineToolChanged` | | Selected line tool is changed |
 | `study_event` | 1.15 | An event related to the study. The callback function receives two arguments: a study ID and an event type (currently possible values for this argument are `remove` and at version 16 - `price_scale_changed`) |
 | `series_event` | 16 | An event related to the series. The callback function receives an argument - an event type (currently the only possible value for this argument is `price_scale_changed`) |
-| `drawing_event` | 1.15 | Drawing was hidden, shown, moved, removed, or clicked. The callback function will receive two arguments: a drawing ID and an event type. Possible values of the event type argument are `hide`, `show`, `move`, `remove`, `click` |
+| `drawing_event` | 1.15 | Drawing was hidden, shown, moved, removed, clicked, or created. The callback function will receive two arguments: a drawing ID and an event type. Possible values of the event type argument are `hide`, `show`, `move`, `remove`, `click`, `create` |
 | `study_properties_changed` | 1.14 | Study properties are changed. Entity ID will be passed as an argument |
 | `series_properties_changed` | 1.15 | Main series properties are changed. |
 | `panes_height_changed` | 1.15 | Panes' size is changed. |

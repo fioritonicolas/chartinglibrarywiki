@@ -33,6 +33,8 @@ Since this version this request contains `multipart/form-data` with the field `p
 
 - The `rest.html` file and `datafeeds/rest` directory have been removed.
 
+- When [subscribed](Widget-Methods#subscribeevent-callback) to `drawing_event` a `click` is no longer emitted when a drawing is created. A `create` event is emitted instead.
+
 **Trading Terminal**
 
 - The [`watchList`](Widget-Methods#chart-watchlist) method now returns a promise that resolves a watchlist API object when the watchlist widget has loaded.
