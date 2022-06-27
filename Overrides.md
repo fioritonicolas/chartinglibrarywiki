@@ -82,6 +82,8 @@ scalesProperties.showSymbolLabels: false
 scalesProperties.showStudyPlotLabels: false
 scalesProperties.showCurrency: true
 scalesProperties.showUnit: true
+scalesProperties.showPriceScaleCrosshairLabel: true
+scalesProperties.showTimeScaleCrosshairLabel: true
 
 timeScale.rightOffset: 5
 

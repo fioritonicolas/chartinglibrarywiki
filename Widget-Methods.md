@@ -71,6 +71,7 @@ widget.onChartReady(function() {
 * :chart: [Trading Terminal only](#chart-trading-terminal-only)
   * [watchList()](#chart-watchlist)
   * [news()](#chart-news)
+  * [widgetbar()](#chart-widgetbar)
 * :chart: [Multiple Charts Layout](#chart-multiple-charts-layout)
   * [chart(index)](#chart-chartindex)
   * [activeChart()](#chart-activechart)
@@ -745,6 +746,28 @@ const widget = new TradingView.widget(/* options */);
 widget.onChartReady(() => {
     widget.news().then(newsApi => {
         // newsApi is ready to use.
+    });
+});
+```
+
+### :chart: widgetbar()
+
+*Starting from version 22.*
+
+Returns a Promise that resolves with an object used to control the widgetbar. The object has the following methods:
+
+1. `showPage(pageName: PageName): void` - show the page in the widgetbar.
+2. `hidePage(pageName: PageName): void` - hide the currently visible page.
+3. `isPageVisible(pageName: PageName): boolean` - check if a page is visible.
+
+The pageName parameter can be one of `'watchlist_details_news'`, `'data_window'`, or `'object_tree'`.
+
+```js
+const widget = new TradingView.widget(/* options */);
+
+widget.onChartReady(() => {
+    widget.widgetbar().then(widgetbarApi => {
+       widgetbarApi.isPageVisible('data_window');
     });
 });
 ```
