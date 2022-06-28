@@ -792,6 +792,20 @@ Percent rank of `source` for `length` bars back.
 - **`source` (series[float])** Series of values to process.
 - **`length` (integer)** Number of bars (length).
 
+## `dmi(diLength, adxSmoothingLength, context)`
+
+Calculates the directional movement values +DI, -DI, DX, ADX, and ADXR.
+
+### **Returns**
+
+An array of the +DI, -DI, DX, ADX, and ADXR values with `diLength` smoothing for the (+/-)DI values and `adxSmoothingLength` for the ADX value.
+
+### **Arguments**
+
+- **`diLength` (integer)** Number of bars (length) used when calculating the +DI and -DI values.
+- **`adxSmoothingLength` (integer)** Number of bars (length) used when calculating the ADX value.
+- **`context`** PineJS execution context.
+
 # Functions specific to Charting Library
 
 - `isZero(number)` - boolean, shows whether the `number` equals zero or almost zero
