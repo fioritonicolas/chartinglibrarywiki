@@ -21,3 +21,7 @@
 ### Volume indicator
 
 Volume is added by default if the financial instrument supports it ([visible_plots_set](Symbology#visible_plots_set) is `ohlcv`). This behavior can be disabled using [create_volume_indicator_by_default](Featuresets).
+
+### Get a list of all indicators
+
+Here's a [list](Indicators-List) of all indicators available on the platform
