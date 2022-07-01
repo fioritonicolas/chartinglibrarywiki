@@ -35,6 +35,8 @@ Since this version this request contains `multipart/form-data` with the field `p
 
 - When [subscribed](Widget-Methods#subscribeevent-callback) to `drawing_event` a `click` is no longer emitted when a drawing is created. A `create` event is emitted instead.
 
+- Study `True Strength Indicator` has been renamed to `True Strength Index` and modified with its style elements being properly named with 1st `Plot` becoming `True Strength Index` & second `Plot` becoming `Signal`.
+
 **Trading Terminal**
 
 - The [`watchList`](Widget-Methods#chart-watchlist) method now returns a promise that resolves a watchlist API object when the watchlist widget has loaded.
