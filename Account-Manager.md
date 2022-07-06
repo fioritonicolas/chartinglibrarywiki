@@ -21,9 +21,13 @@ The following information should be returned by [accountManagerInfo](Broker-API#
 
 ## Account Manager header
 
-Account Manager's header includes the name of the broker.
+Account Manager's header includes the name of the broker and a summary.
 
 ### accountTitle: String
+
+### summary: array of [SummaryField](#summaryfield)
+
+You can display your own custom fields that will always be shown above the pages.
 
 ## Orders Page
 
@@ -190,6 +194,14 @@ Optional `notSortable` can be set to prevent column sorting.
 
 `highlightDiff` can be set with `formatPrice` and `formatPriceForexSup` formatters only to highlight the changes of the field.
 
+### notHideable
+
+Optional `notHideable` parameter can be set to prevent the column from hiding.
+
+### hideByDefault
+
+Optional `hideByDefault` parameter can be set to hide the column by default.
+
 ### tooltipProperty
 
 `tooltipProperty` is a key of the row object that is used to get the tooltip to display when hovering over a cell. The tooltip property refers to an object whose keys are property names and values are the corresponding tooltips.
@@ -214,6 +226,26 @@ If it is `true`, the first character of every word in the sentence in the column
 ### showZeroValues
 
 If it is `false`, the zero values will be hidden. The default value is `true`.
+
+## SummaryField
+
+`SummaryField` is an object with the following fields:
+
+1. `text`: String
+
+    Displays a text value.
+
+1. `wValue`: WatchedValue
+
+    A [WatchedValue](WatchedValue) object that can be used to read the state of field.
+
+1. `formatter`: String
+
+    Name of the formatter, for details please see [formatter](#formatter).
+
+1. `isDefault`: Boolean
+
+    Optional `isDefault` parameter can be set to display the field by default.
 
 ## Context Menu
 

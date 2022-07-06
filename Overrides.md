@@ -80,8 +80,6 @@ scalesProperties.showSeriesPrevCloseValue: false
 scalesProperties.showStudyLastValue: false
 scalesProperties.showSymbolLabels: false
 scalesProperties.showStudyPlotLabels: false
-scalesProperties.showCurrency: true
-scalesProperties.showUnit: true
 scalesProperties.showPriceScaleCrosshairLabel: true
 scalesProperties.showTimeScaleCrosshairLabel: true
 
@@ -110,6 +108,7 @@ sessions.vertlines.sessBreaks.width: 1
 // Baseline = 10
 // Range = 11
 // HiLo = 12
+// Column = 13
 
 mainSeriesProperties.style: 1
 
@@ -195,6 +194,12 @@ mainSeriesProperties.barStyle.downColor: "#ef5350"
 mainSeriesProperties.barStyle.barColorsOnPrevClose: false
 mainSeriesProperties.barStyle.dontDrawOpen: false
 mainSeriesProperties.barStyle.thinBars: true
+
+// Column styles
+mainSeriesProperties.columnStyle.upColor: "#26a69a"
+mainSeriesProperties.columnStyle.downColor: "#ef5350"
+mainSeriesProperties.columnStyle.barColorsOnPrevClose: true
+mainSeriesProperties.columnStyle.priceSource: "close"
 
 // Line styles
 mainSeriesProperties.lineStyle.color: "#2962FF"

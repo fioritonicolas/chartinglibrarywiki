@@ -18,3 +18,9 @@ Sets new value. Readonly WatchedValue object doesn't have this method.
 ### unsubscribe(callback)
 
 Use the same function that you used in the `subscribe` function to unsubscribe from the updates.
+
+### when(callback)
+
+A simplified version of subscription, with promise-like interface, generally for using with boolean-valued watched values
+
+1. `callback` is a function to be called when the value became `true`. `once` and `callWithLast` are implicitly set to true.

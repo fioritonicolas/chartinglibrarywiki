@@ -42,6 +42,12 @@ To change properties, use [Series Api](./Series-Api).
 - `linewidth` (`number`)
 - `transparency` (`number`)
 
+### Column
+
+- `upColor` (`string`)
+- `downColor` (`string`)
+- `barColorsOnPrevClose` (`boolean`)
+
 ### Heikin Ashi
 
 - `upColor` (`string`)

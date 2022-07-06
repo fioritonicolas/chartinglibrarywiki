@@ -421,7 +421,7 @@ custom_indicators_getter: function(PineJS) {
 
 ### preset
 
-`preset` is a name of predefined widget settings. For now, the only value supported in the `preset` is  `mobile`. The example of this `preset` is [available here](https://charting-library.tradingview.com).
+`preset` is a name of predefined widget settings. For now, the only value supported in the `preset` is  `mobile`. The example of this `preset` is [available here](https://charting-library.tradingview-widget.com).
 
 ```javascript
 preset: "mobile",

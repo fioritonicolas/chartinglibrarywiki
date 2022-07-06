@@ -19,6 +19,7 @@
 | Move further to the right | Ctrl + ⇨ |
 | Toggle maximize chart | Alt + Enter or Alt + Click |
 | Toggle maximize pane | Doubleclick |
+| Toggle collapse pane | Ctrl + Doubleclick |
 | Go to date | Alt + g |
 | Take snapshot | Alt + s |
 | Reset chart | Alt + r |

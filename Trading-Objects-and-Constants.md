@@ -163,6 +163,12 @@ This is an object that should be passed in the constructor of the Trading Termin
 
     Whether stop orders should behave like Market-if-touched in both directions. Enabling this flag removes the direction check from the order dialog.
 
+* `supportStopLimitOrdersInBothDirections`
+
+    *Default:* `false`
+
+    Enabling this flag prevents the check of stop price direction from the stop limit order dialog.
+
 * `supportStopLimitOrders`
 
     *Default:* `false`

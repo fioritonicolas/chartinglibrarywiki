@@ -4,7 +4,7 @@ Please note that the leading `-` characters are not part of the featureset name 
 
 ### Visibility of controls and other visual elements
 
-[**Interactive Map of Featuresets**](https://charting-library.tradingview.com/featuresets.html)
+[**Interactive Map of Featuresets**](https://charting-library.tradingview-widget.com/featuresets.html)
 
 | ID                                      | Default State | Library Version | Description                                                |
 |-----------------------------------------|---------------|-----------------|------------------------------------------------------------|
@@ -157,3 +157,5 @@ Please note that the leading `-` characters are not part of the featureset name 
 | order_panel_undock | on | 17 | Shows the Undock button in the Order Panel Settings
 | chart_hide_close_position_button | off | 22 | Hide the close button for position
 | chart_hide_close_order_button | off | 22 | Hide the close button for order
+| watchlist_import_export | on | | Enables watchlist export and import
+| dom_widget | off | 22 | Enables DOM widget visibility

@@ -25,7 +25,7 @@ widget.onChartReady(function() {
   * [setSymbol(symbol, interval, callback)](#setsymbolsymbol-interval-callback)
   * [remove()](#remove)
   * [closePopupsAndDialogs()](#closepopupsanddialogs)
-  * [selectLineTool(drawingId)](#selectlinetooldrawingid)
+  * [selectLineTool(drawingId)](#selectlinetooldrawingid-options)
   * [selectedLineTool()](#selectedlinetool)
   * [takeScreenshot()](#takescreenshot)
   * [takeClientScreenshot()](#takeclientscreenshotoptions)
@@ -249,7 +249,7 @@ Removes the chart widget from the web page.
 
 Calling this method closes all context menus, pop-ups or dialogs.
 
-### selectLineTool(drawingId)
+### selectLineTool(drawingId, options)
 
 1. `drawingId`: may be one of the [identifiers](Shapes-and-Overrides) or
     1. `cursor`
@@ -259,6 +259,7 @@ Calling this method closes all context menus, pop-ups or dialogs.
     1. `measure`
     1. `zoom`
     1. `brush`
+1. `options`: optional object. In case when `drawingId` is `icon` this object has one field `icon`. Check out [Shapes and Overrides](Shapes-and-Overrides) for more information about supported `icon` values.
 
 Selects a drawing or a cursor. It's the same as a single click on a drawing button.
 

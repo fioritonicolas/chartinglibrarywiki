@@ -43,6 +43,8 @@ Since this version this request contains `multipart/form-data` with the field `p
 
 - `suggestedQty` has been removed from the [Trading Host](Trading-Host).
 
+- `dome_widget` featureset which controls the DOM widget visibility has be deprecated in favour of `dom_widget`.
+
 ## Version 21
 
 - Featureset `show_dialog_on_snapshot_ready` has been removed. [takeScreenshot](Widget-Methods#takescreenshot) makes a snapshot silently, so you can use the URL from [onScreenshotReady](Widget-Methods#subscribeevent-callback) callback to show your own dialog instead.

@@ -170,6 +170,7 @@ The result is an object with the following data:
 - `quoteCurrency` - the second currency quoted in a currency pair. Used for crypto currencies only.
 - `bigPointValue` - The value represented by a full point of price movement in the contract currency. This value is used to calculate the Total Value (symbol currency) of the order.
 - `units` - Units of quantity or amount. Displayed instead of the Units label in the Quantity/Amount field.
+- `priceMagnifier` - The value represents how much price is multiplied in relation to base monetary unit.
 
 ### accountsMetainfo() : or Promise
 

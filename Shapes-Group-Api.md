@@ -18,6 +18,7 @@ All operations available through the Shapes Group API go through the undo stack.
   * [removeGroup(groupId)](#removegroupgroupid)
   * [groups()](#groups)
   * [shapesInGroup(groupId)](#shapesingroupgroupid)
+  * [addShapeToGroup(groupId, shapeId)](#addshapetogroupgroupid-shapeid)
   * [excludeShapeFromGroup(groupId, shapeId)](#excludeshapefromgroupgroupid-shapeid)
 * [Z-Order operations](#z-order-operations)
   * [availableZOrderOperations(groupId)](#availablezorderoperationsgroupid)
@@ -66,7 +67,16 @@ Returns an array with IDs of all existing groups of shapes for the currently sel
 
 Returns an array of shape identifiers in the specified group.
 
+### addShapeToGroup(groupId, shapeId)
+
+Adds the specified shape to the specified group
+
+1. `groupId`: string, result of createGroupFromSelection call. A group to add the shape to.
+2. `shapeId`: EntityID. A shape to be added to the group.
+
 ### excludeShapeFromGroup(groupId, shapeId)
+
+Excludes the specified shape from the specified group
 
 1. `groupId`: string, result of createGroupFromSelection call. A group to exclude the shape from.
 2. `shapeId`: EntityID. A shape to be removed from the group.

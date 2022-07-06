@@ -195,7 +195,6 @@ linetooldaterange: {
     borderColor: 'rgba(41, 98, 255, 0.9)',
     extendTop: false,
     extendBottom: false,
-    showLabel: true,
 },
 
 // Price Range
@@ -213,7 +212,6 @@ linetoolpricerange: {
     borderColor: 'rgba(41, 98, 255, 0.9)',
     extendLeft: false,
     extendRight: false,
-    showLabel: true,
 },
 
 // Date and Price Range
@@ -230,7 +228,6 @@ linetooldateandpricerange: {
     borderWidth: 1,
     drawBorder: false,
     borderColor: 'rgba( 21, 119, 96, 1)',
-    showLabel: true,
 },
 
 // Short Position
@@ -937,6 +934,7 @@ linetoolfibretracement: {
     reverse: false,
     coeffsAsPercents: false,
     fibLevelsBasedOnLogScale: false,
+    labelFontSize: 12,
     trendline: {
         visible: true,
         color: 'rgba(120, 123, 134, 1)',
@@ -961,6 +959,7 @@ linetoolfibchannel: {
     horzLabelsAlign: 'left',
     vertLabelsAlign: 'middle',
     coeffsAsPercents: false,
+    labelFontSize: 12,
     levelsStyle: {
         linewidth: 1.0,
         linestyle: LINESTYLE_SOLID
@@ -1116,6 +1115,7 @@ linetooltrendbasedfibextension: {
     reverse: false,
     coeffsAsPercents: false,
     fibLevelsBasedOnLogScale: false,
+    labelFontSize: 12,
     trendline: {
         visible: true,
         color: 'rgba(120, 123, 134, 1)',

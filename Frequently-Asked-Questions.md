@@ -26,7 +26,7 @@ We’ve done a lot of work to make the process of connecting data simple and cle
 
 First, you need to read and understand this article: [How to connect my data](Connecting-Data)
 
-If you still have questions, open [Demo Chart](https://charting-library.tradingview.com), then open Debugger-Network and filter requests by `demo_feed`. You will see all requests and corresponding responses in the [UDF](UDF) format.
+If you still have questions, open [Demo Chart](https://charting-library.tradingview-widget.com), then open Debugger-Network and filter requests by `demo_feed`. You will see all requests and corresponding responses in the [UDF](UDF) format.
 
 </details>
 

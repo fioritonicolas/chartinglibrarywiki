@@ -139,6 +139,7 @@ Timezone of the exchange for this symbol. We expect to get the name of the time 
 - `Europe/Bratislava`
 - `Europe/Brussels`
 - `Europe/Bucharest`
+- `Europe/Budapest`
 - `Europe/Copenhagen`
 - `Europe/Helsinki`
 - `Europe/Istanbul`

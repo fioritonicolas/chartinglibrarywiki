@@ -48,7 +48,7 @@ For instance:
 Starting from V 1.12 you may use the following properties to customize `Overlay`:
 
 ```javascript
-Overlay.style: (bars = 0, candles = 1, line = 2, area = 3, heiken ashi = 8, hollow candles = 9)
+Overlay.style: (bars = 0, candles = 1, line = 2, area = 3, heiken ashi = 8, hollow candles = 9, columns = 13)
 Overlay.showPriceLine: boolean
 Overlay.allowExtendTimeScale: boolean (whether an overlay should extend time axis, the property is used only when 'secondary_series_extend_time_scale' featureset is enabled)
 
@@ -77,10 +77,15 @@ Overlay.barStyle.downColor: color
 Overlay.barStyle.barColorsOnPrevClose: boolean
 Overlay.barStyle.dontDrawOpen: boolean
 
+Overlay.columnStyle.upColor: color
+Overlay.columnStyle.downColor: color
+Overlay.columnStyle.barColorsOnPrevClose: boolean
+Overlay.columnStyle.priceSource: open/high/low/close
+
 Overlay.lineStyle.color: color
 Overlay.lineStyle.linewidth: integer
 Overlay.lineStyle.priceSource: open/high/low/close
-Overlay.lineStyle.styleType: (bars = 0, candles = 1, line = 2, area = 3, heiken ashi = 8, hollow candles = 9)
+Overlay.lineStyle.styleType: (bars = 0, candles = 1, line = 2, area = 3, heiken ashi = 8, hollow candles = 9, columns = 13)
 
 Overlay.areaStyle.color1: color
 Overlay.areaStyle.color2: color

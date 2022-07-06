@@ -368,6 +368,7 @@ Sets the main series style.
 | Hollow Candle | 9 | ChartStyle.HollowCandle | ✓ | ✓ |
 | Baseline | 10 | ChartStyle.Baseline | ✓ | ✓ |
 | Hi-Lo | 12 | ChartStyle.HiLo | ✓ | ✓ |
+| Column | 13 | ChartStyle.Column | ✓ | ✓ |
 
 ```javascript
 widget.activeChart().setChartType(12);
