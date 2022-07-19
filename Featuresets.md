@@ -159,3 +159,4 @@ Please note that the leading `-` characters are not part of the featureset name 
 | chart_hide_close_order_button | off | 22 | Hide the close button for order
 | watchlist_import_export | on | | Enables watchlist export and import
 | dom_widget | off | 22 | Enables DOM widget visibility
+| keep_object_tree_widget_in_right_toolbar | off | 23 | Keeps Object Tree widget in the right toolbar
