@@ -602,6 +602,7 @@ widget.activeChart().createShape({ time: 1514764800 }, { shape: 'vertical_line' 
         If not specified the line tool is placed on top of all existing chart objects.
     * `showInObjectsTree`: Displays the shape in the Objects Tree dialog. The default value is `true`.
     * `ownerStudyId`: optional argument of `EntityId` type. It can be used to bind a line tool to a study. For instance, it can be used to create a shape on an additional pane.
+    * `filled`: **defaults to true**. If true, and the shape supports it, fills the shape with color.
 
 The function returns `entityId` - unique ID of the shape if the creation was successful and `null` if it wasn't.
 
