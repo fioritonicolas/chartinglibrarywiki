@@ -6,6 +6,10 @@ Here is the list of breaking changes:
 
 <!-- markdownlint-disable no-emphasis-as-header -->
 
+## Version 23
+
+- `Average close price line` is now masked by default in Chart settings and can be shown by using `show_average_close_price_line_and_label` featureset.
+
 ## Version 22
 
 - Methods [getTimezone](Chart-Methods#gettimezone) and [setTimezone](Chart-Methods#settimezonetimezone) have been deprecated and will be removed in future versions. Use [getTimezoneApi](Chart-Methods#gettimezoneapi) instead.
