@@ -24,6 +24,14 @@ Returns values of study inputs - an array of [StudyInputValueItem](#studyinputva
 
 Sets input values for a study. It may contain only some of the inputs that you wish to change.
 
+### getStyleInfo()
+
+Returns the information about all the properties contained in Style tab - an array of [StudyStyleInfo](#studystyleinfo) objects.
+
+### getStyleValues()
+
+Returns values of style properties - an array of [StudyStyleValues](#studystylevalues) objects.
+
 ### mergeUp()
 
 Merges the study up (if possible).
@@ -127,3 +135,18 @@ An object with the following keys:
 
 * `id` - input ID of the study
 * `value` - value of the input
+
+### StudyStyleInfo
+
+An object with the following keys (short decription). More details can be found [here](Custom-Studies-Metainfo):
+
+* `defaults` - optional property - an object containing settings that are applied when user clicks `Apply Defaults`
+* `plots` - optional property - an array with study plots info
+* `styles` - optional property - an object with `plot id` as keys and style info as values
+* `bands` - optional property - an array with study band info objects
+* `filledAreas` - optional property - an array of filled areas info. Filled area is a special object, which allows coloring an area between two plots
+* `palettes` - optional property - an object with the definitions of palletes that are used in `plots` and `defaults`
+
+### StudyStyleValues
+
+Same object as [StudyStyleInfo](#studystyleinfo) without the `default` property.
