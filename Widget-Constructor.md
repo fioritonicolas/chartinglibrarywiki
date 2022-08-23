@@ -283,6 +283,7 @@ It is an object that contains the following fields:
 1. timeFormatter
 2. dateFormatter
 3. tickMarkFormatter
+4. priceFormatterFactory
 
 You can use these formatters to adjust the display format of the date and time values.
 `timeFormatter` and `dateFormatter` are objects that include functions such as `format` and `formatLocal`:
@@ -325,6 +326,17 @@ type TickMarkType =
     | 'TimeWithSeconds';
 ```
 
+`priceFormatterFactory` is a function with the following signature:
+
+```typescript
+function priceFormatterFactory(symbolInfo: ISymbolInfo | null, minTick: string): ISymbolValueFormatter;
+
+interface ISymbolValueFormatter {
+    format(price: number, signPositive?: boolean): string;
+}
+
+```
+
 Example:
 
 ```javascript
@@ -362,7 +374,17 @@ custom_formatters: {
         }
 
         throw new Error('unhandled tick mark type ' + tickMarkType);
-    }
+    },
+    priceFormatterFactory: (symbolInfo, minTick) => {
+        if (symbolInfo?.fractional || minTick !== 'default' && minTick.split(',')[2] === 'true') {
+            return {
+                format: (price, signPositive) => {
+                    // return the appropriate format
+                },
+            };
+        }
+        return null; // this is to use default formatter;
+    },
 }
 ```
 
