@@ -69,6 +69,8 @@ Here is a list of methods supported by the chart.
   * [isPriceToBarRatioLocked()](#ispricetobarratiolocked)
   * [getAllPanesHeight()](#getAllPanesHeight)
   * [setAllPanesHeight(heights)](#setAllPanesHeightheights)
+  * [maximizeChart()](#maximizeChart)
+  * [restoreChart()](#restoreChart)
 * [Other](#other)
   * [exportData(options)](#exportdataoptions)
   * [selection()](#selection)
@@ -1123,6 +1125,22 @@ Set the height for each panes in the order provided by the array.
 
 ```javascript
 console.log(widget.activeChart().setAllPanesHeight([250, 400, 200]));
+```
+
+### maximizeChart()
+
+Maximize to its full size currently selected chart.
+
+```javascript
+widget.activeChart().maximizeChart();
+```
+
+### restoreChart()
+
+Restore to its initial size currently selected chart.
+
+```javascript
+widget.activeChart().restoreChart();
 ```
 
 ## Other
