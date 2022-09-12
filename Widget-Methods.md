@@ -683,6 +683,12 @@ This method applies "overrides" to the properties without reloading the chart.
 
 This method applies "overrides" to the styles or inputs of the indicators without reloading the chart.
 
+### setDebugMode(enabled)
+
+Enable or disable debug mode.
+
+1. `enabled` is a boolean flag. `true` to enable debug mode, `false` to disable.
+
 ## :chart: Trading Terminal only
 
 The following methods are available in [Trading Terminal](Trading-Terminal) only.

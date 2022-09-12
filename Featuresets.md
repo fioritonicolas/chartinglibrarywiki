@@ -125,6 +125,7 @@ Please note that the leading `-` characters are not part of the featureset name 
 | auto_enable_symbol_labels  | on | 20 | Displays Symbol Name Label when comparing Symbols
 | insert_indicator_dialog_shortcut  | on | 21 | Enables insert indicator dialog shortcut (/)
 | two_character_bar_marks_labels | off | 22 | Display at most two characters in bar marks. The default behaviour is to only display one character.
+| confirm_overwrite_if_chart_layout_with_name_exists | off | 23 | By default many chart layouts can be saved with the same name. If this feature is enabled then the library will prompt to confirm overwriting chart layouts with the same name when saving, renaming, or cloning ("Save as").
 
 ### Important features
 
