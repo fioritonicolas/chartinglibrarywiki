@@ -164,3 +164,4 @@ Please note that the leading `-` characters are not part of the featureset name 
 | watchlist_import_export | on | | Enables watchlist export and import
 | dom_widget | off | 22 | Enables DOM widget visibility
 | keep_object_tree_widget_in_right_toolbar | off | 23 | Keeps Object Tree widget in the right toolbar
+| show_last_price_and_change_only_in_series_legend | off | 23 | Show only the last price and change values in the main series legend.
