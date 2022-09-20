@@ -79,6 +79,7 @@ Please note that the leading `-` characters are not part of the featureset name 
 | show_average_close_price_line_and_label | off           |       23        | Hide the visibility settings of the label and the average close price line |
 | hide_image_invalid_symbol               | off           |       23        | Hide image shown to illustrate symbol is invalid |
 | hide_object_tree_and_price_scale_exchange_label | off | 23 | Show/Hide the exchange label from the displayed label |
+| use_na_string_for_not_available_values                   | off           |       24        | Show a literal "n/a" for not available values instead of "∅". |
 
 ### Elements placement
 
