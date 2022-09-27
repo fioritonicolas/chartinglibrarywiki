@@ -470,7 +470,11 @@ widget.onChartReady(function() {
 ### createButton(options)
 
 1. `options`: object `{ align: "left" }`
-    * `align`: `right` | `left`. default: `left`
+    * `align`: `right` | `left`. Default: `left`
+    * `useTradingViewStyle`: `boolean`. Default: `false`. If true then a button with the built-in styles will be created in the header instead of a placeholder HTMLElement.
+    * `text`: `string`. Only used if `useTradingViewStyle` is `true`. The text shown on the button.
+    * `title`: optional `string`. Only used if `useTradingViewStyle` is `true`. The text shown on hovering the button.
+    * `onClick`: optional `() => void`. Only used if `useTradingViewStyle` is `true`. A function called when the button is clicked.
 
 Creates a new DOM element in the top toolbar of the chart and returns [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) for this button.
 You can use it to add custom controls right on the chart.
