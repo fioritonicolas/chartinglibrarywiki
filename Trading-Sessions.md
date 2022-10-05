@@ -4,7 +4,7 @@ A trading session defines the hours in a week when a symbol is actively traded o
 
 Session time is expected to be in the **exchange time zone**.
 
-**Use this parser to check your session string**: <http://tradingview.github.io/checksession.html>
+**Use this parser to check your session string**: <https://charting-library.tradingview-widget.com/checksession.html>
 
 ## Session formats
 
