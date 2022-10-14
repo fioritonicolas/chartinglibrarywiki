@@ -107,12 +107,24 @@ datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com
 
 ### timeframe
 
-Sets the default timeframe of the chart. Timeframe is a period of bars that will be loaded and shown on the screen.
-Valid timeframe is a number with a letter D for days and M for months.
+Sets the default timeframe of the chart.
+
+The timeframe can be relative to the current date, or a range.
+
+A relative timeframe is a number with a letter D for days and M for months:
 
 ```javascript
 timeframe: '3M',
 ```
+
+A range is an object with to and from properties. The to and from properties should be UNIX timestamps:
+
+```javascript
+timeframe: { from: 1640995200, to: 1643673600 } // from 2022-01-01 to 2022-02-01
+```
+
+**Note**:
+When using a range the chart will still request data up to the current date. This is to enable scrolling foreward in time once the chart has loaded.
 
 ### timezone
 
