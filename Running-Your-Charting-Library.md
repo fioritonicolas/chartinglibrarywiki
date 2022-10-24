@@ -62,3 +62,7 @@ Open [http://127.0.0.1:9090](http://127.0.0.1:9090) in your browser.
 You may see the working example of Charting Library [here](https://charting-library.tradingview-widget.com). This example is based on our [sample data feed.](http://demo_feed.tradingview.com)
 
 **IMPORTANT**: This datafeed is just a sample. It contains a dozen of symbols (from Quandl) and provides DWM only. It does however support quotes. Please use it for testing purposes only.
+
+# Hosting the library on a separate origin (domain)
+
+If you would like to host the library on a separate origin to the page containing the chart then please view the following guide: [Hosting the library on a separate origin](Hosting-Library-Cross-Origin).

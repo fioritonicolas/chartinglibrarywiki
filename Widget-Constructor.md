@@ -151,6 +151,8 @@ A path to a `static` folder.
 library_path: "charting_library/",
 ```
 
+* If you would like to host the library on a separate origin to the page containing the chart then please view the following guide: [Hosting the library on a separate origin](Hosting-Library-Cross-Origin).
+
 ### width, height
 
 The desired size of a widget. Please make sure that there is enough space for the widget to be displayed correctly.
