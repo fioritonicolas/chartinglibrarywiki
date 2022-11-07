@@ -174,7 +174,7 @@ widget.onShortcut(['ctrl', 'shift', 220], function() {
 ### subscribe(event, callback)
 
 1. `event`: can be
-
+<!-- markdownlint-disable MD033 -->
 | Event name | Library Version | Description |
 |------------|-----------------|-------------|
 | `toggle_sidebar` | | Drawing toolbar is shown/hidden |
@@ -203,7 +203,7 @@ widget.onShortcut(['ctrl', 'shift', 220], function() {
 | `onSelectedLineToolChanged` | | Selected line tool is changed |
 | `study_event` | 1.15 | An event related to the study. The callback function receives two arguments: a study ID and an event type (currently possible values for this argument are `remove` and at version 16 - `price_scale_changed`) |
 | `series_event` | 16 | An event related to the series. The callback function receives an argument - an event type (currently the only possible value for this argument is `price_scale_changed`) |
-| `drawing_event` | 1.15 | Drawing was hidden, shown, moved, removed, clicked, or created. The callback function will receive two arguments: a drawing ID and an event type. Possible values of the event type argument are `hide`, `show`, `move`, `remove`, `click`, `create` |
+| `drawing_event` | 1.15 | Drawing was hidden, shown, moved, removed, clicked, or created. The callback function will receive two arguments: a drawing ID and an event type. Possible values of the event type argument are `hide`, `show`, `move`, `remove`, `click`, `create`, `properties_changed`, `points_changed`. <ul><li>Note that the `properties_changed` event can be emitted before `create` event, and that the event isn't debounced (for example dragging a slider for a property will result in this event firing for each movement on the slider), you may want to debounce this within your code.</li><li>The `move` event is emitted when a drawing is moved as a whole, whilst the `points_changed` event is emitted when a single point of the drawing is moved. `points_changed` will always fire when `move` fires but not vice-versa.</li></ul> |
 | `study_properties_changed` | 1.14 | Study properties are changed. Entity ID will be passed as an argument |
 | `series_properties_changed` | 1.15 | Main series properties are changed. |
 | `panes_height_changed` | 1.15 | Panes' size is changed. |
@@ -211,7 +211,7 @@ widget.onShortcut(['ctrl', 'shift', 220], function() {
 | :chart: `layout_about_to_be_changed` | | Amount or placement of the charts is about to be changed |
 | :chart: `layout_changed` | | Amount or placement of the charts is changed |
 | :chart: `activeChartChanged` | | Active chart is changed |
-
+<!-- markdownlint-enable MD033 -->
 1. `callback`: function(arguments)
 
 The library will call the `callback` function when a GUI `event` has happened.
