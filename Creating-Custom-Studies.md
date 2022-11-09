@@ -1,6 +1,6 @@
 ## Displaying your data as an indicator
 
-To display your own indicators there is a [custom_indicators_getter](Widget-Constructor#custom_indicators_getter) field in Widget Constructor.
+To display your own indicators there is a [custom_indicators_getter](Widget-Constructor#custom_indicators_getter) field in Widget Constructor. The function will be called with the PineJS helper library passed as the first parameter, and it is described in more detail [here](PineJS-Utility-Functions).
 There is a variety of plot types, such as lines, arrows, bar colorers, etc. For full reference please see the [Metainfo](Custom-Studies-Metainfo) section.
 
 The custom indicator is an object with the following fields:

@@ -221,13 +221,16 @@ widget.activeChart().onVisibleRangeChanged().subscribe(
 
 1. `range`: object, `{ from, to }`
     * `from`, `to`: unix timestamps, UTC
-1. `options`: `{ applyDefaultRightMargin, percentRightMargin }`
-    * `applyDefaultRightMargin`: indicates whether the library should apply the default right margin to the right border if it points on the last bar.
-    * `percentRightMargin`: indicates whether the library should apply the percent right margin to the right border if it points on the last bar.
+    * `to` is optional, and will fallback to the timestamp of the latest bar on the chart
+1. `options`: optional argument, `{ applyDefaultRightMargin, percentRightMargin }`
+    * `applyDefaultRightMargin`: boolean, indicates whether the library should apply the default right margin
+    * `percentRightMargin`: number, indicates whether the library should apply the percent right margin
 
 Forces the chart to adjust its parameters (scroll, scale) to make the selected time period fit the widget.
 
 Returns a Promise object, which will be resolved after visible range is applied.
+
+`applyDefaultRightMargin` and `percentRightMargin` apply a margin between the latest bar on the chart and the right edge of the chart. Note that when either of these options are specified that the `to` value of the range specified will be ignored and the timestamp of the latest bar on the chart will be used instead.
 
 This method was introduced in version `1.2`.
 

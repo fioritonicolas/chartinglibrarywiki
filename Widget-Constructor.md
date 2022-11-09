@@ -443,7 +443,7 @@ snapshot_url: "https://myserver.com/snapshot",
 
 Function that returns a Promise object with an array of your custom indicators.
 
-`PineJS` variable will be passed as the first argument of this function and can be used inside your indicators to access internal helper functions.
+`PineJS` variable will be passed as the first argument of this function and can be used inside your indicators to access internal helper functions. This PineJS helper library is described in more detail [here](PineJS-Utility-Functions).
 
 See more details [here](Creating-Custom-Studies).
 

@@ -203,6 +203,16 @@ Calculates average of all given series (elementwise).
 
 Average.
 
+## `n(context)`
+
+### **Returns**
+
+Current bar index. Numbering is zero-based, index of the first historical bar is 0.
+
+### **Arguments**
+
+- **`context`** PineJS execution context.
+
 ## `open(context)`
 
 Current open price.
@@ -824,10 +834,101 @@ An array of the +DI, -DI, DX, ADX, and ADXR values with `diLength` smoothing for
 - `isdaily(context)` - boolean, returns `true` if current resolution is a daily resolution
 - `isweekly(context)` - boolean, returns `true` if current resolution is a weekly resolution
 - `ismonthly(context)` - boolean, returns `true` if current resolution is a monthly resolution
-- `add_days_considering_dst(timezone, utcTime, daysCount)`
 - `selectSessionBreaks(context, times)` - select session breaks for intraday resolutions only
-- `timepart(symbol, field, time)`
-- `wvap(source, context)`
-- `createNewSessionCheck(context)`
+- `createNewSessionCheck(context)` - boolean, checks whether a new session can be created
 - `error(message)` - returns study error with `message` specified
 - `time(context, period, spec)` - returns UNIX time of current bar
+- `zigzag(deviation, depth, ctx)` - returns the zig-zag pivot points (where `deviation` is a number, `depth` is an integer)
+- `zigzagbars(deviation, depth, ctx)` - returns the zig-zag pivot points (for bars)
+
+## `eps()`
+
+### **Returns**
+
+Epsilon (machine precision). Upper bound on the relative approximation error due to rounding in floating point arithmetic.
+
+## `greaterOrEqual(x1, x2, eps)`
+
+### **Returns**
+
+True if `x1` is greater than or equal to `x2`.
+
+### **Arguments**
+
+- **`x1` (float|integer)**
+- **`x2` (float|integer)**
+- **`eps` (float)** Epsilon (Optional).
+
+## `lessOrEqual(x1, x2, eps)`
+
+### **Returns**
+
+True if `x1` is less than or equal to `x2`.
+
+### **Arguments**
+
+- **`x1` (float|integer)**
+- **`x2` (float|integer)**
+- **`eps` (float)** Epsilon (Optional).
+
+## `equal(x1, x2, eps)`
+
+### **Returns**
+
+True if `x1` is equal to `x2` (within the accuracy of epsilon).
+
+### **Arguments**
+
+- **`x1` (float|integer)**
+- **`x2` (float|integer)**
+- **`eps` (float)** Epsilon (Optional).
+
+## `greater(x1, x2, eps)`
+
+### **Returns**
+
+True if `x1` is greater than `x2`.
+
+### **Arguments**
+
+- **`x1` (float|integer)**
+- **`x2` (float|integer)**
+- **`eps` (float)** Epsilon (Optional).
+
+## `less(x1, x2, eps)`
+
+### **Returns**
+
+True if `x1` is less than `x2`.
+
+### **Arguments**
+
+- **`x1` (float|integer)**
+- **`x2` (float|integer)**
+- **`eps` (float)** Epsilon (Optional).
+
+## `compare(x1, x2, eps)`
+
+### **Returns**
+
+- `0` if values are equal
+- `1` if x1 is greater than x2
+- `-1` if x1 is less than x2
+
+### **Arguments**
+
+- **`x1` (float|integer)**
+- **`x2` (float|integer)**
+- **`eps` (float)** Epsilon (Optional).
+
+## `add_days_considering_dst(timeZone, utcTime, daysCount)`
+
+### **Returns**
+
+The time is `daysCount` number of days, taking into account Daylight savings time.
+
+### **Arguments**
+
+- **`timeZone` (string)** Timezone.
+- **`utcTime` (Date)** Date (JS built-in).
+- **`daysCount` (integer)**.
