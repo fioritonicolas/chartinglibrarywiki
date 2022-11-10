@@ -540,6 +540,8 @@ Adds your custom CSS to the chart. `url` should be an absolute or relative path 
 custom_css_url: 'css/style.css',
 ```
 
+See [loading_screen](#loading_screen) for adjusting the loading spinner colors.
+
 ### custom_font_family
 
 Change the font family used on the chart. The value should be in the same format as the `font-family` property in CSS.
