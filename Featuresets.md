@@ -9,7 +9,6 @@ Please note that the leading `-` characters are not part of the featureset name 
 | ID                                      | Default State | Library Version | Description                                                |
 |-----------------------------------------|---------------|-----------------|------------------------------------------------------------|
 | **header_widget**                       | on            |                 |                                                            |
-| - header_widget_dom_node                | on            |                 | Disabling this feature hides the header widget DOM element |
 | - header_symbol_search                  | on            |                 |                                                            |
 | - symbol_search_hot_key                 | on            |       1.9       | Symbol search by pressing any key                          |
 | - header_resolutions                    | on            |                 |                                                            |

@@ -311,6 +311,8 @@ Available modes:
 
 This method returns a readonly [WatchedValue](WatchedValue) object that can be used to read/watch the current supported [chart types](Chart-Methods#setcharttypetype) by an active chart.
 
+The chart type is returned as a number. You can see which number corresponds to which chart type in the [Overrides](Overrides) documentation for `mainSeriesProperties.style`.
+
 ### startFullscreen()
 
 This method enters full-screen mode.
