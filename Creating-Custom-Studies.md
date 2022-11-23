@@ -105,5 +105,5 @@ custom_indicators_getter: function(PineJS) {
 * [Custom styles for every point](Custom-Studies-Examples#custom-styles-for-every-point)
 * [Complex filled areas](Custom-Studies-Examples#complex-filled-areas)
 * [OHLC plots](Custom-Studies-OHLC-Plots)
-* [Advanced OHLC style](Custom-Studies-Examples#advanced-OHLC-style)
 * [Advanced Shapes use](Custom-Studies-Examples#advanced-shapes-use)
+* [Advanced Colouring Candles](Custom-Studies-Examples#advanced-colouring-candles)

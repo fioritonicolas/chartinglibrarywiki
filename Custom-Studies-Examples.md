@@ -229,6 +229,10 @@ custom_indicators_getter: function(PineJS) {
             },
         },
         inputs: [],
+        format: {
+            type: 'price',
+            precision: 4,
+        },
     },
     constructor: function() {
         this.main = function(context, inputCallback) {
@@ -365,6 +369,10 @@ custom_indicators_getter: function(PineJS) {
             },
         },
         inputs: [],
+        format: {
+            type: 'price',
+            precision: 4,
+        },
     },
     constructor: function() {
         this.main = function(context, inputCallback) {
@@ -424,6 +432,9 @@ custom_indicators_getter: function(PineJS) {
         inputs: [],
         id: 'fxn@tv-basicstudies-1',
         scriptIdPart: '',
+        format: {
+            type: 'inherit',
+        },
     },
     constructor: function() {
         this.main = function(context, inputCallback) {
@@ -439,90 +450,163 @@ custom_indicators_getter: function(PineJS) {
 },
 ```
 
-## Advanced OHLC style
+## Advanced Colouring Candles
 
-![images/OHLC_plots.png](images/OHLC_plots.png)
+![images/colouring_candles.png](images/colouring_candles.png)
 
 ```javascript
 {
-    name: 'Equity',
+    name: 'Colouring Candles',
     metainfo: {
+        _metainfoVersion: 51,
+
+        id: 'colouringcandles@tv-basicstudies-1',
+        name: 'Colouring Candles',
+        description: 'Colouring Candles',
+        shortDescription: 'Colouring Candles',
+
+        isCustomIndicator: true,
+        isTVScript: false,
+        isTVScriptStub: false,
+
+        is_price_study: false, // whether the study should appear on the main series pane.
+        linkedToSeries: true, // whether the study price scale should be the same as the main series one.
+
+        format: {
+            type: 'price',
+            precision: 2,
+        },
+
         plots: [
             {
-                id: 'plot_0',
+                id: 'plot_open',
                 type: 'ohlc_open',
-                target: 'plotcandle_0',
+                target: 'plot_candle',
             },
             {
-                id: 'plot_1',
+                id: 'plot_high',
                 type: 'ohlc_high',
-                target: 'plotcandle_0',
+                target: 'plot_candle',
             },
             {
-                id: 'plot_2',
+                id: 'plot_low',
                 type: 'ohlc_low',
-                target: 'plotcandle_0',
+                target: 'plot_candle',
             },
             {
-                id: 'plot_3',
+                id: 'plot_close',
                 type: 'ohlc_close',
-                target: 'plotcandle_0',
+                target: 'plot_candle',
             },
             {
-                id: 'plot_4',
+                id: 'plot_bar_color',
                 type: 'ohlc_colorer',
-                palette: 'palette_0',
-                target: 'plotcandle_0',
-            }
+                palette: 'palette_bar',
+                target: 'plot_candle',
+            },
+            {
+                id: 'plot_wick_color',
+                type: 'wick_colorer',
+                palette: 'palette_wick',
+                target: 'plot_candle',
+            },
+            {
+                id: 'plot_border_color',
+                type: 'border_colorer',
+                palette: 'palette_border',
+                target: 'plot_candle',
+            },
         ],
 
         palettes: {
-            palette_0: {
-                colors: [
-                    { name: 'Up Color' },
-                    { name: 'Down Color' }
-                ],
+            palette_bar: {
+                colors: [{ name: 'Colour One' }, { name: 'Colour Two' }],
 
                 valToIndex: {
-                    '1': 0,
-                    '-1': 1
-                }
-            }
+                    0: 0,
+                    1: 1,
+                },
+            },
+            palette_wick: {
+                colors: [{ name: 'Colour One' }, { name: 'Colour Two' }],
+
+                valToIndex: {
+                    0: 0,
+                    1: 1,
+                },
+            },
+            palette_border: {
+                colors: [{ name: 'Colour One' }, { name: 'Colour Two' }],
+
+                valToIndex: {
+                    0: 0,
+                    1: 1,
+                },
+            },
         },
 
         ohlcPlots: {
-            plotcandle_0: {
+            plot_candle: {
                 title: 'Candles',
             },
         },
 
         defaults: {
             ohlcPlots: {
-                plotcandle_0: {
+                plot_candle: {
                     borderColor: '#000000',
                     color: '#000000',
-                    drawBorder: false,
+                    drawBorder: true,
                     drawWick: true,
                     plottype: 'ohlc_candles',
                     visible: true,
-                    wickColor: '#737375'
+                    wickColor: '#000000',
                 },
             },
 
             palettes: {
-                palette_0: {
+                palette_bar: {
                     colors: [
-                        { color: '#6ba583' },
-                        { color: '#d75442' }
-                    ]
-                }
+                        { color: '#1948CC', width: 1, style: 0 },
+                        { color: '#F47D02', width: 1, style: 0 },
+                    ],
+                },
+                palette_wick: {
+                    colors: [
+                        { color: '#0C3299', },
+                        { color: '#E65000', },
+                    ],
+                },
+                palette_border: {
+                    colors: [
+                        { color: '#5B9CF6', },
+                        { color: '#FFB74D', },
+                    ],
+                },
             },
 
-            precision: 4,
+            precision: 2,
             inputs: {},
         },
         styles: {},
         inputs: [],
-    }
-}
+    },
+    constructor: function () {
+        this.main = function (context, inputCallback) {
+            this._context = context;
+            this._input = inputCallback;
+
+            this._context.select_sym(0);
+
+            var o = PineJS.Std.open(this._context);
+            var h = PineJS.Std.high(this._context);
+            var l = PineJS.Std.low(this._context);
+            var c = PineJS.Std.close(this._context);
+
+            // Color is determined randomly
+            const colour = Math.round(Math.random());
+            return [o, h, l, c, colour /*bar*/, colour /*wick*/, colour /*border*/];
+        };
+    },
+},
 ```
