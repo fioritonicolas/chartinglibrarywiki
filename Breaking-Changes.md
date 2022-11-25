@@ -10,6 +10,19 @@ Here is the list of breaking changes:
 
 - `Average close price line` is now masked by default in Chart settings and can be shown by using `show_average_close_price_line_and_label` featureset.
 
+**UI changes**
+
+- With this version you will notice that the top toolbar has been redesigned with the following changes:
+
+  - Button padding & separator size have been reduced
+  - Compare button has shifted next to Symbol
+  - Drawing icon is now more prominent
+  - New fullscreen icon
+  - Save button style better highlights when there's a change
+  - Top toolbar now extends to left & right edges
+  - UI font changes to a default system one
+  - Undo/redo buttons are now relocated next to the save button
+
 ## Version 22
 
 - Methods [getTimezone](Chart-Methods#gettimezone) and [setTimezone](Chart-Methods#settimezonetimezone) have been deprecated and will be removed in future versions. Use [getTimezoneApi](Chart-Methods#gettimezoneapi) instead.

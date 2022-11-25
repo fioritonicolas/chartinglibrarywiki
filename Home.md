@@ -21,3 +21,7 @@ We’ve got a [public GitHub repository](https://github.com/tradingview/charting
 ### Best Practices
 
 Reading the article with [Best Practices](Best-Practices) will prevent you from making the most common mistakes and will **save your time**. If you have a question, you can give a try to our thoroughly prepared [FAQ](Frequently-Asked-Questions) or [ask the community](https://github.com/tradingview/charting_library/issues/).
+
+### Using the library with online code playgrounds
+
+Get started with our library on a code playground / editor like JSFiddle by following [this guide](Online-Editors). Provided starter templates allow you to quickly create your own examples, produce bug reproductions, and experiment with the library.
