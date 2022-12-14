@@ -33,6 +33,13 @@ or
 widget.applyOverrides({ 'paneProperties.backgroundGradientStartColor': 'red', 'paneProperties.backgroundGradientEndColor' : 'red' })
 ```
 
+***Note about price scale overrides***
+
+Overrides which start with `mainSeriesProperties.priceAxisProperties` can only be used within the widget constructor options.
+You should use the [Price Scale API](Price-Scale-Api) instead if you wish to make changes to an existing price scale.
+
+### List of overrides
+
 ```javascript
 paneProperties.vertGridProperties.color: "rgba(42, 46, 57, 0.06)"
 paneProperties.vertGridProperties.style: LINESTYLE_SOLID
@@ -49,7 +56,6 @@ paneProperties.crossHairProperties.width: 1
 paneProperties.topMargin: 10
 paneProperties.bottomMargin: 8
 
-paneProperties.axisProperties.autoScale: true
 paneProperties.axisProperties.percentage: false
 paneProperties.axisProperties.indexedTo100: false
 paneProperties.axisProperties.log: false
@@ -124,8 +130,6 @@ mainSeriesProperties.minTick: "default" // minTick value is a string representat
 mainSeriesProperties.showCountdown: true
 
 
-mainSeriesProperties.priceAxisProperties.autoScale: true            (see #749)
-mainSeriesProperties.priceAxisProperties.lockScale: false
 mainSeriesProperties.priceAxisProperties.percentage: false
 mainSeriesProperties.priceAxisProperties.indexedTo100: false
 mainSeriesProperties.priceAxisProperties.log: false

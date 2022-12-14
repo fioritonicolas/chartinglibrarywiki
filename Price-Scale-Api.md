@@ -24,6 +24,34 @@ Returns whether the price scale is inverted or not.
 
 Changes current inverted state of the price scale.
 
+### isLocked()
+
+*Since version 23.*
+
+Returns whether the price scale is locked or not.
+
+### setLocked(isLocked)
+
+*Since version 23.*
+
+1. `isLocked` - new locked state for the price scale
+
+Changes current lock state of the price scale.
+
+### isAutoScale()
+
+*Since version 23.*
+
+Returns whether the price scale has auto scaling enabled or not.
+
+### setAutoScale(isAutoScale)
+
+*Since version 23.*
+
+1. `isAutoScale` - new auto scale state for the price scale
+
+Changes current auto scale state of the price scale.
+
 ### getVisiblePriceRange()
 
 *Starting from version 1.15.*
