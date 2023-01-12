@@ -298,6 +298,7 @@ It is an object that contains the following fields:
 2. dateFormatter
 3. tickMarkFormatter
 4. priceFormatterFactory
+5. studyFormatterFactory
 
 You can use these formatters to adjust the display format of the date and time values.
 `timeFormatter` and `dateFormatter` are objects that include functions such as `format` and `formatLocal`:
@@ -351,6 +352,21 @@ interface ISymbolValueFormatter {
 
 ```
 
+`studyFormatterFactory` is a function with the following signature:
+
+```typescript
+function studyFormatterFactory(format: CustomStudyFormatterFormat, symbolInfo: ISymbolInfo | null): CustomStudyFormatter;
+
+interface CustomStudyFormatter {
+    format(value: number): string;
+}
+
+export interface CustomStudyFormatterFormat {
+    type: 'price' | 'volume' | 'percent';
+    precision: number | undefined;
+}
+```
+
 Example:
 
 ```javascript
@@ -397,6 +413,28 @@ custom_formatters: {
                 },
             };
         }
+        return null; // this is to use default formatter;
+    },
+    studyFormatterFactory: (format, symbolInfo) => {
+        if (format.type === 'price') {
+            const numberFormat = new Intl.NumberFormat('en-US', { notation: 'scientific' });
+            return {
+                format: (value) => numberFormat.format(value)
+            };
+        }
+
+        if (format.type === 'volume') {
+            return {
+                format: (value) => (value / 1e9).toPrecision(format?.precision || 2) + 'B'
+            };
+        }
+
+        if (format.type === 'percent') {
+            return {
+                format: (value) => `${value.toPrecision(format?.precision || 4)} percent`
+            };
+        }
+
         return null; // this is to use default formatter;
     },
 }
