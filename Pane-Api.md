@@ -42,3 +42,11 @@ Returns the pane's index, it's a number between 0 and all panes count - 1.
 *Starting from version 1.15.*
 
 Moves the pane to a new position, `paneIndex` should be a number between 0 and all panes count - 1.
+
+### collapse()
+
+Reduces the size of a pane to its minimum.
+
+### restore()
+
+Restores the size of a pane that was previously collapsed.
